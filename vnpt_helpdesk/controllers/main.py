@@ -9,7 +9,7 @@ _logger = logging.getLogger(__name__)
 
 class VnptHelpDeskController(http.Controller):
 
-    @http.route("/bptoday/api/location", type='json', auth='public')
+    @http.route("/bptoday/api/location", type='json', auth='public', csrf=False)
     def api_bptd_location(self, **kwargs):
         if request.httprequest.method == 'POST':
             try:
