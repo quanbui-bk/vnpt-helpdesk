@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="bptd_location_action" model="ir.actions.act_window">
+        <field name="name">BPTD Location Management</field>
+        <field name="res_model">bptd.location</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('vnpt_helpdesk.bptd_location_view_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('vnpt_helpdesk.bptd_location_view_form')})]"/>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+        id="vnpt_helpdesk_root_menu"
+        name="VNPT Helpdesk"
+        web_icon="vnpt_helpdesk,static/description/icon.png"
+        sequence="5"/>
+
+    <menuitem
+        id="bptd_management"
+        action="bptd_location_action"
+        parent="vnpt_helpdesk.vnpt_helpdesk_root_menu"
+        sequence="1"
+        name="BPTD Management"/>
+</odoo>

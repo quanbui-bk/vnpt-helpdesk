@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="bptd_location_view_tree" model="ir.ui.view">
+        <field name="name">bptd.location.tree</field>
+        <field name="model">bptd.location</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="id" />
+                <field name="uuid" />
+                <field name="latitude" />
+                <field name="longitude" />
+                <field name="platform" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="bptd_location_view_form" model="ir.ui.view">
+        <field name="name">bptd.location.form</field>
+        <field name="model">bptd.location</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="id" />
+                        <field name="uuid" />
+                        <field name="latitude" />
+                        <field name="longitude" />
+                        <field name="platform" />
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
